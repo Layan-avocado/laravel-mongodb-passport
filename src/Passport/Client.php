@@ -84,7 +84,10 @@ class Client extends Model
             config("auth.providers.{$provider}.model")
         );
     }
-
+    public function hasGrantType($grantType)
+    {
+        return true;
+    }
 
     /**
      * Get all of the authentication codes for the client.
